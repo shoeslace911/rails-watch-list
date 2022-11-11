@@ -3,8 +3,9 @@
 
   <% @lists.each do |list|%>
   <div class="card w-100 h-50">
-    <%= list.name %>
-    </div>
+    <%= link_to list.name, list_path(list) %>
+  </div>
   <% end %>
 
+  <p><%= link_to "Make new list?", new_list_path %></p>
 </div>
